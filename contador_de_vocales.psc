@@ -26,12 +26,14 @@ Algoritmo ContadorDeVocales
 	Definir frase, letra_a_evaluar Como Caracter
 	Definir longitud_de_la_frase, contador_de_vocales Como Entero
 	
+	// pedimos una frase al usuario
 	Escribir "Ingrese una palabra o frase"
 	Leer frase
 	
 	longitud_de_la_frase <- Longitud(frase)
 	contador_de_vocales <- 0
 	
+	// recorremos la frase letra x letra y si es vocal la sumamos al contador
 	Para indice_de_la_letra <- 1 Hasta longitud_de_la_frase Hacer
 		letra_a_evaluar <- SubCadena(frase, indice_de_la_letra, indice_de_la_letra)
 		
@@ -40,5 +42,7 @@ Algoritmo ContadorDeVocales
 		Fin Si
 	Fin Para
 	
+	
+	// mostramos resultado
 	Escribir "La palabra " + frase +  " tiene " + ConvertirATexto(contador_de_vocales) + " vocales"
 FinAlgoritmo
