@@ -6,19 +6,23 @@ Algoritmo Adivinar
 	
 	Escribir "Intente adivinar el numero"
 	
+	// Le pedimos un numero al usuario hasta que adivine
 	Repetir
 		cantidadDeIntentos <- cantidadDeIntentos + 1
 		
+		// Pedimos el numero al usuario
 		Escribir ""
 		Escribir "Ingrese un numero del 1 al 25"
 		Leer eleccionDeUsuario
 		
+		// Si no ingresa un numero valido le pedimos que vuelva a intentar
 		Si eleccionDeUsuario > 25 Entonces
 			Escribir "Ingresaste un número mayor a 25, volve a intentar!"
 		SiNo
 			
 			distancia <- abs(numeroAleatorio - eleccionDeUsuario)
 			
+			// Mostramos si adivinó, si estuvo cerca o falló
 			Segun distancia Hacer
 				0:
 					Escribir "Adivinaste en " + ConvertirATexto(cantidadDeIntentos) + " intentos!"

@@ -2,6 +2,7 @@ Funcion MostrarMatriz(nombre, matriz, cantidadFilas, cantidadColumnas)
 	Escribir ""
 	Escribir "Matriz " + nombre ":"
 	
+	// Recorremos la matriz y mostramos valores
 	Para indiceFila <- 1 Hasta cantidadFilas  Hacer
 		Para indiceColumna <- 1 Hasta cantidadColumnas Hacer
 			Escribir ConvertirATexto(matriz[indiceFila, indiceColumna]) + " " Sin Saltar
@@ -15,6 +16,7 @@ Funcion CrearMatriz(nombre, matriz, cantidadFilas, cantidadColumnas)
 	
 	Escribir "Vamos a crear la matriz " + nombre
 	
+	// Recorremos la matriz y guardamos valores
 	Para indiceFila <- 1 Hasta cantidadFilas Hacer
 		
 		Para indiceColumna <- 1 Hasta cantidadColumnas Hacer
@@ -31,6 +33,7 @@ Algoritmo SumaDeMatrices
 	Definir matrizA, matrizB, matrizResultado, filasA, columnasA, filasB, columnasB Como Entero
 	Definir lasMatricesSonIguales Como Logico
 	
+	// Pedimos al usuario que ingrese la cantidad de filas y columnas
 	Escribir "Ingrese la cantidad de filas de la matriz A"
 	Leer filasA
 	
@@ -39,6 +42,7 @@ Algoritmo SumaDeMatrices
 	
 	Dimensionar matrizA[filasA, columnasA]
 	
+	// Pedimos que ingrese los valores para la matriz
 	Escribir "Ingrese la cantidad de filas de la matriz B"
 	Leer filasB
 	
@@ -47,11 +51,12 @@ Algoritmo SumaDeMatrices
 	
 	Dimensionar matrizB[filasB, columnasB]
 	
+	// Validamos que las matrices son iguales
 	lasMatricesSonIguales <- filasA == filasB Y columnasA == columnasB
-	
-	Dimensionar matrizResultado[filasA, columnasA]
 
 	Si lasMatricesSonIguales Entonces
+		Dimensionar matrizResultado[filasA, columnasA]
+		
 		CrearMatriz("A", matrizA, filasA, columnasA)
 		MostrarMatriz("A", matrizA, filasA, columnasA)
 		
@@ -60,12 +65,14 @@ Algoritmo SumaDeMatrices
 		CrearMatriz("B", matrizB, filasB, columnasB)
 		MostrarMatriz("B", matrizB, filasB, columnasB)
 		
+		// Realizamos la suma
 		Para indiceFila <- 1 Hasta filasA
 			Para indiceColumna <- 1 Hasta columnasA
 				matrizResultado[indiceFila,indiceColumna] <- matrizA[indiceFila,indiceColumna] + matrizB[indiceFila,indiceColumna]
 			FinPara
 		FinPara
 		
+		// Mostramos la matriz resultado
 		MostrarMatriz("Resultado", matrizResultado, filasA, columnasA)
 	SiNo
 		Escribir "Para sumar dos matrices necesitamos que tengan igual cantidad de filas y columnas"
