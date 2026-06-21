@@ -27,4 +27,4 @@ En el ejercicios usamos la libreria networkx por lo cual hay que tener un enviro
 
 ## Grafo del ejercicio redes y comunicaciones
 
-![grafo redes y comunicaciones](redes_y_comunicacion_grafo.png)
+![grafo redes y comunicaciones](grafo.png)

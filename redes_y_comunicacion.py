@@ -34,7 +34,7 @@ for numero_del_nodo in range(cantidad_de_nodos):
 
 # creamos imagen del grafo
 networkx.draw_circular(grafo, with_labels=True)
-matplotlib.pyplot.savefig("./redes_y_comunicacion_grafo.png")
+matplotlib.pyplot.savefig("./grafo.png")
 
 # mostramos los nodos y las conexiones en la consola
 print("Nodos:")
