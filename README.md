@@ -20,9 +20,9 @@ Trabajo practico integrador de la materia programación. Algunos algoritmos fuer
 ## Como ejecutar el ejercicio redes y comunicaciones
 En el ejercicios usamos la libreria networkx por lo cual hay que tener un enviroment con la libreria instalada
 
-1. Crear entorno virtual: `python -m venv .venv
+1. Crear entorno virtual: `python -m venv .venv`
 2. Activar el env: `source .venv/bin/activate`
-3. instalar dependencia: `pip install matplotlib networkx
+3. instalar dependencia: `pip install matplotlib networkx`
 4. ejecutar el script del ejercicio con `redes_y_comunicacion.py`
 
 ## Grafo del ejercicio redes y comunicaciones
