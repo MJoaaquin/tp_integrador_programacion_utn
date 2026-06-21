@@ -3,11 +3,6 @@ import matplotlib.pyplot
 import networkx
 
 cantidad_de_nodos = 8
-estructura_del_nodo = {
-    "nombre": None,
-    "vecino_izquierda": None,
-    "vecino_derecha": None,
-}
 
 # Crear grafo bidirecional
 grafo = networkx.Graph()
@@ -33,5 +28,8 @@ networkx.draw_circular(grafo, with_labels=True)
 matplotlib.pyplot.savefig("./grafo_redes_y_comunicacion.png")
 
 # mostramos los nodos y las conexiones en la consola
+print("Nodos:")
 print(list(grafo.nodes()))
+
+print("Relaciones entre nodos:")
 print(list(grafo.edges()))

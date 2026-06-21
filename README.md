@@ -11,18 +11,20 @@ Técnico en Telecomunicaciones
 Programación
 
 ## Programa Utilizado
-PseInt
+- PseInt
+- Zed IDE
 
 ## Descripción
-Trabajo practico integrador de la materia programación.
-
-## Grafo del ejercicio redes y comunicaciones
-
-![grafo redes y comunicaciones](grafo_redes_y_comunicacion.png)
+Trabajo practico integrador de la materia programación. Algunos algoritmos fueron creados en PseInt y otro en Python
 
 ## Como ejecutar el ejercicio redes y comunicaciones
 En el ejercicios usamos la libreria networkx por lo cual hay que tener un enviroment con la libreria instalada
 
-1. activar el env source que contiene la lib networkx `.venv/bin/activate`
-1. instalar dependencia `pip install`
-2. ejecutar el script del ejercicio con `redes_y_comunicacion.py`
+1. Crear entorno virtual: `python -m venv .venv
+2. Activar el env: `source .venv/bin/activate`
+3. instalar dependencia: `pip install matplotlib networkx
+4. ejecutar el script del ejercicio con `redes_y_comunicacion.py`
+
+## Grafo del ejercicio redes y comunicaciones
+
+![grafo redes y comunicaciones](redes_y_comunicacion_grafo.png)
