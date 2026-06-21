@@ -4,8 +4,8 @@ import networkx
 
 cantidad_de_nodos = 8
 
-# Crear grafo bidirecional
-grafo = networkx.Graph()
+# Crear grafo direccional
+grafo = networkx.DiGraph()
 
 # Crear nodos en un bucle
 for numero_del_nodo in range(cantidad_de_nodos):
@@ -14,14 +14,23 @@ for numero_del_nodo in range(cantidad_de_nodos):
 
 # Una vez que el grafo tiene los nodos, creamos las conexiones
 for numero_del_nodo in range(cantidad_de_nodos):
+    primer_nodo = 0
     ultimo_nodo = cantidad_de_nodos - 1
 
-    if numero_del_nodo == ultimo_nodo:
-        # si es el ultimo, conectar con el primero
-        grafo.add_edge(numero_del_nodo, 0)
-    else:
-        # si no conectar con el siguiente
+    if numero_del_nodo == primer_nodo:
         grafo.add_edge(numero_del_nodo, numero_del_nodo + 1)
+        grafo.add_edge(numero_del_nodo, ultimo_nodo)
+
+    elif numero_del_nodo == ultimo_nodo:
+        grafo.add_edge(numero_del_nodo, primer_nodo)
+        grafo.add_edge(numero_del_nodo, numero_del_nodo - 1)
+
+    else:
+        nodo_siguiente = numero_del_nodo + 1
+        nodo_anterior = numero_del_nodo - 1
+
+        grafo.add_edge(numero_del_nodo, nodo_siguiente)
+        grafo.add_edge(numero_del_nodo, nodo_anterior)
 
 # creamos imagen del grafo
 networkx.draw_circular(grafo, with_labels=True)
